@@ -1,0 +1,519 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Inter:Bold';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inter:Medium';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter:Regular';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter:Semi Bold';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Lora:Italic';
+  src: url('https://static.figma.com/font/Lora-Italic_wght__2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lora:Regular';
+  src: url('https://static.figma.com/font/Lora_wght__2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  background: #f7f6ee;
+  color: #193c33;
+  font-synthesis: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a,
+input {
+  font: inherit;
+}
+
+@media (max-width: 1200px) {
+  [data-name='Government identity'],
+  [data-name='Primary navigation'],
+  [data-name='Welcome'],
+  [data-name='Life journey'],
+  [data-name='Everyday essentials'],
+  [data-name='Service directory'],
+  [data-name='Service guide'],
+  [data-name='Citizen voice and protection'],
+  [data-name='Public information'],
+  [data-name='Source note'],
+  [data-name='Footer content'] {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  [data-name='Welcome'] {
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  [data-name='Welcome content'] {
+    flex: 1 1 55%;
+    width: auto;
+  }
+
+  [data-name='Welcome content'] > p,
+  [data-name='Directory title'],
+  [data-name='Footer brand'],
+  [data-name='Footer brand'] > p,
+  [data-name='Transparency introduction'] {
+    width: auto;
+  }
+
+  [data-name='Family portrait'] {
+    flex: 1 1 45%;
+    width: auto;
+    min-width: 360px;
+  }
+
+  [data-name='Journey introduction'] > div {
+    width: 58%;
+  }
+
+  [data-name='Journey connector'] {
+    left: 8%;
+    width: 84%;
+  }
+
+  [data-name='Chapter group'] {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  [data-name='Essential services'] {
+    align-items: stretch;
+  }
+
+  [data-name='Health services'] {
+    flex: 1.25 1 0;
+    width: auto;
+  }
+
+  [data-name='Household services'] {
+    flex: 0.75 1 0;
+  }
+
+  [data-name='Directory title'] {
+    flex: 1;
+  }
+
+  [data-name='Complaint channels'] > [data-name='Lapor Pak Yes'] {
+    flex: 1.3 1 0;
+    width: auto;
+  }
+
+  [data-name='Government and resources'] {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  [data-name='Government identity'] > p {
+    display: none;
+  }
+
+  [data-name='Primary navigation'] {
+    height: auto;
+    min-height: 88px;
+  }
+
+  [data-name='Navigation links'] {
+    gap: 16px;
+  }
+
+  [data-name='Navigation links'] > p:nth-child(2),
+  [data-name='Navigation links'] > p:nth-child(3),
+  [data-name='Navigation links'] > p:nth-child(4) {
+    display: none;
+  }
+
+  [data-name='Welcome'] {
+    flex-direction: column;
+  }
+
+  [data-name='Family portrait'] {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    height: 520px;
+  }
+
+  [data-name='Journey introduction'],
+  [data-name='Essentials heading'],
+  [data-name='Directory introduction'],
+  [data-name='Service guide'],
+  [data-name='Public information'] {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  [data-name='Journey introduction'] > div,
+  [data-name='Directory title'],
+  [data-name='Guide introduction'],
+  [data-name='Transparency introduction'] {
+    width: 100%;
+  }
+
+  [data-name='Chapter group'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  [data-name='Essential services'],
+  [data-name='Complaint channels'] {
+    flex-direction: column;
+  }
+
+  [data-name='Health services'],
+  [data-name='Household services'],
+  [data-name='Complaint channels'] > [data-name='Lapor Pak Yes'],
+  [data-name='Women and children protection'] {
+    flex: none;
+    width: 100%;
+  }
+
+  [data-name='Directory columns'] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  [data-name='Guide steps'] {
+    width: 100%;
+  }
+
+  [data-name='Government and resources'] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  [data-name='Footer brand'] {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-name='Rumah Layanan — Kabupaten Lamongan'] {
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  [data-name='Rumah Layanan — Kabupaten Lamongan'] p {
+    white-space: normal;
+  }
+
+  [data-name='Government identity'],
+  [data-name='Primary navigation'],
+  [data-name='Welcome'],
+  [data-name='Life journey'],
+  [data-name='Everyday essentials'],
+  [data-name='Service directory'],
+  [data-name='Service guide'],
+  [data-name='Citizen voice and protection'],
+  [data-name='Public information'],
+  [data-name='Source note'],
+  [data-name='Footer content'] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  [data-name='Government identity'] {
+    height: 32px;
+  }
+
+  [data-name='Government name'] p {
+    font-size: 9px;
+  }
+
+  [data-name='Primary navigation'] {
+    min-height: 78px;
+  }
+
+  [data-name='Portal mark'] {
+    height: 44px;
+    width: 40px;
+  }
+
+  [data-name='Wordmark'] p:first-child {
+    font-size: 16px;
+  }
+
+  [data-name='Wordmark'] p:last-child {
+    font-size: 9px;
+  }
+
+  [data-name='Navigation links'] > p {
+    display: none;
+  }
+
+  [data-name='Complaint access'] {
+    padding: 10px;
+  }
+
+  [data-name='Complaint access'] p {
+    display: none;
+  }
+
+  [data-name='Welcome'] {
+    gap: 36px;
+    padding-bottom: 44px;
+    padding-top: 40px;
+  }
+
+  [data-name='Welcome content'] {
+    gap: 22px;
+  }
+
+  [data-name='Welcome content'] > p:nth-of-type(1) {
+    font-size: clamp(42px, 13vw, 58px);
+    letter-spacing: -1.8px;
+    line-height: 1.05;
+  }
+
+  [data-name='Welcome content'] > p:nth-of-type(2) {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  [data-name='Service search'] {
+    height: 58px;
+  }
+
+  [data-name='Search action'] {
+    height: 42px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  [data-name='Search suggestions'] {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  [data-name='Explore actions'] {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  [data-name='Explore actions'] > [data-name='Action'] {
+    justify-content: space-between;
+  }
+
+  [data-name='Family portrait'] {
+    height: min(118vw, 480px);
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+  }
+
+  [data-name='Portrait caption'] {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    padding: 15px;
+  }
+
+  [data-name='Caption content'] {
+    min-width: 0;
+  }
+
+  [data-name='Caption content'] p:first-child {
+    font-size: 17px;
+  }
+
+  [data-name='Life journey'],
+  [data-name='Service directory'] {
+    gap: 28px;
+    padding-bottom: 52px;
+    padding-top: 52px;
+  }
+
+  [data-name='Journey introduction'] > div,
+  [data-name='Directory title'] > p:first-child {
+    font-size: 35px;
+  }
+
+  [data-name='Journey route'] {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+
+  [data-name='Journey connector'] {
+    display: none;
+  }
+
+  [data-name='Journey stop'] p {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  [data-name='Chapter group'],
+  [data-name='Directory columns'] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-name='Chapter heading'] {
+    white-space: normal;
+  }
+
+  [data-name='Chapter heading'] p:last-child {
+    font-size: 23px;
+  }
+
+  [data-name='Everyday essentials'],
+  [data-name='Service guide'],
+  [data-name='Citizen voice and protection'] {
+    padding-bottom: 52px;
+    padding-top: 52px;
+  }
+
+  [data-name='Essentials heading'] > p:first-child,
+  [data-name='Citizen voice and protection'] > p,
+  [data-name='Guide introduction'] > div:last-child {
+    font-size: 33px;
+    line-height: 1.2;
+  }
+
+  [data-name='Health services'] {
+    flex-direction: column;
+    height: auto;
+  }
+
+  [data-name='Healthcare photograph'] {
+    height: 220px;
+    width: 100%;
+  }
+
+  [data-name='Health service links'] {
+    padding: 24px;
+    width: 100%;
+  }
+
+  [data-name='Health service links'] > p:first-child,
+  [data-name='Household services'] > p:first-child {
+    font-size: 22px;
+  }
+
+  [data-name='Directory introduction'] {
+    width: 100%;
+  }
+
+  [data-name='Directory total'] {
+    align-self: flex-start;
+  }
+
+  [data-name='Directory category'] {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  [data-name='Guide steps'] {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  [data-name='Guide step'] {
+    border-top: 1px solid #d8caa7;
+    padding-top: 22px;
+    width: 100%;
+  }
+
+  [data-name='Lapor Pak Yes'],
+  [data-name='Women and children protection'] {
+    padding: 26px;
+  }
+
+  [data-name='Channel introduction'] > p:first-child {
+    font-size: 29px;
+  }
+
+  [data-name='WhatsApp contact'] {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  [data-name='Contact number'] p:last-child {
+    font-size: 24px;
+  }
+
+  [data-name='Other reporting channels'] {
+    flex-wrap: wrap;
+  }
+
+  [data-name='Public information'] {
+    padding-bottom: 60px;
+  }
+
+  [data-name='Public resource'] {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  [data-name='Resource content'] p:first-child {
+    font-size: 15px;
+  }
+
+  [data-name='Source note'] {
+    align-items: flex-start;
+  }
+
+  [data-name='Government and resources'] {
+    grid-template-columns: 1fr;
+  }
+
+  [data-name='Footer brand'] {
+    grid-column: auto;
+  }
+
+  [data-name='Footer baseline'] {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    white-space: normal;
+  }
+}

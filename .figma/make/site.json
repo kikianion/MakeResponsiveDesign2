@@ -1,0 +1,10 @@
+{
+  "description": "Create and optimize responsive web designs effortlessly, ensuring seamless user experiences across all devices for designers and developers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
